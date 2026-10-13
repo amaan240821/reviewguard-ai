@@ -1,0 +1,447 @@
+{
+  "timestamp": "2026-10-13T19:00:45.851301+00:00",
+  "dataset": {
+    "raw_rows": 1600,
+    "clean_rows": 1596,
+    "removed_duplicates": 4,
+    "train_rows": 1276,
+    "test_rows": 320,
+    "class_counts": {
+      "1": 800,
+      "0": 796
+    }
+  },
+  "positive_class": "deceptive",
+  "test_classifier": {
+    "accuracy": 0.9125,
+    "precision": 0.8975903614457831,
+    "recall": 0.93125,
+    "f1": 0.9141104294478528,
+    "roc_auc": 0.9640234375000001,
+    "pr_auc": 0.9628170377460632,
+    "threshold": 0.42000000000000004,
+    "confusion_matrix": [
+      [
+        143,
+        17
+      ],
+      [
+        11,
+        149
+      ]
+    ]
+  },
+  "test_composite": {
+    "accuracy": 0.878125,
+    "precision": 0.8622754491017964,
+    "recall": 0.9,
+    "f1": 0.8807339449541285,
+    "roc_auc": 0.9418359375,
+    "pr_auc": 0.9330156271206735,
+    "threshold": 0.33,
+    "confusion_matrix": [
+      [
+        137,
+        23
+      ],
+      [
+        16,
+        144
+      ]
+    ]
+  },
+  "hotel_held_out": {
+    "accuracy": 0.8746081504702194,
+    "precision": 0.8658536585365854,
+    "recall": 0.8875,
+    "f1": 0.8765432098765432,
+    "roc_auc": 0.9433520047169812,
+    "pr_auc": 0.9468541707829446,
+    "threshold": 0.42000000000000004,
+    "confusion_matrix": [
+      [
+        548,
+        88
+      ],
+      [
+        72,
+        568
+      ]
+    ]
+  },
+  "hotel_folds": [
+    {
+      "fold": 1,
+      "test_hotels": [
+        "homewood",
+        "omni",
+        "sofitel",
+        "swissotel"
+      ],
+      "accuracy": 0.87109375,
+      "precision": 0.8455882352941176,
+      "recall": 0.905511811023622,
+      "f1": 0.8745247148288974,
+      "roc_auc": 0.9387780015870109,
+      "pr_auc": 0.9405072847161229,
+      "threshold": 0.42000000000000004,
+      "confusion_matrix": [
+        [
+          108,
+          21
+        ],
+        [
+          12,
+          115
+        ]
+      ]
+    },
+    {
+      "fold": 2,
+      "test_hotels": [
+        "affinia",
+        "ambassador",
+        "intercontinental",
+        "james"
+      ],
+      "accuracy": 0.8352941176470589,
+      "precision": 0.8384615384615385,
+      "recall": 0.8384615384615385,
+      "f1": 0.8384615384615385,
+      "roc_auc": 0.9219076923076923,
+      "pr_auc": 0.9193245768517304,
+      "threshold": 0.42000000000000004,
+      "confusion_matrix": [
+        [
+          104,
+          21
+        ],
+        [
+          21,
+          109
+        ]
+      ]
+    },
+    {
+      "fold": 3,
+      "test_hotels": [
+        "amalfi",
+        "monaco",
+        "sheraton",
+        "talbott"
+      ],
+      "accuracy": 0.8814229249011858,
+      "precision": 0.8778625954198473,
+      "recall": 0.8914728682170543,
+      "f1": 0.8846153846153846,
+      "roc_auc": 0.9446111527881971,
+      "pr_auc": 0.9481676779035744,
+      "threshold": 0.42000000000000004,
+      "confusion_matrix": [
+        [
+          108,
+          16
+        ],
+        [
+          14,
+          115
+        ]
+      ]
+    },
+    {
+      "fold": 4,
+      "test_hotels": [
+        "hardrock",
+        "hyatt",
+        "knickerbocker",
+        "palmer"
+      ],
+      "accuracy": 0.91796875,
+      "precision": 0.9375,
+      "recall": 0.9022556390977443,
+      "f1": 0.9195402298850575,
+      "roc_auc": 0.9687022434134116,
+      "pr_auc": 0.9763557520086406,
+      "threshold": 0.42000000000000004,
+      "confusion_matrix": [
+        [
+          115,
+          8
+        ],
+        [
+          13,
+          120
+        ]
+      ]
+    },
+    {
+      "fold": 5,
+      "test_hotels": [
+        "allegro",
+        "conrad",
+        "fairmont",
+        "hilton"
+      ],
+      "accuracy": 0.8671875,
+      "precision": 0.8320610687022901,
+      "recall": 0.9008264462809917,
+      "f1": 0.8650793650793651,
+      "roc_auc": 0.9437404346495255,
+      "pr_auc": 0.9515906827376538,
+      "threshold": 0.42000000000000004,
+      "confusion_matrix": [
+        [
+          113,
+          22
+        ],
+        [
+          12,
+          109
+        ]
+      ]
+    }
+  ],
+  "model_comparison": [
+    {
+      "model": "TF-IDF + Logistic Regression",
+      "cv_f1": 0.8898490951127368,
+      "cv_std": 0.019305760530479454,
+      "fold_scores": [
+        0.9212598425196851,
+        0.8769230769230769,
+        0.8949416342412452,
+        0.8638132295719845,
+        0.8923076923076924
+      ]
+    },
+    {
+      "model": "TF-IDF + Linear SVM",
+      "cv_f1": 0.8904857179168724,
+      "cv_std": 0.024746684217170002,
+      "fold_scores": [
+        0.924901185770751,
+        0.8725868725868726,
+        0.8992248062015504,
+        0.8537549407114624,
+        0.9019607843137255
+      ]
+    },
+    {
+      "model": "MiniLM + Logistic Regression",
+      "cv_f1": 0.8049314519919001,
+      "cv_std": 0.03798156195455751,
+      "fold_scores": [
+        0.7878787878787878,
+        0.8156862745098039,
+        0.7849056603773585,
+        0.7630522088353414,
+        0.8731343283582089
+      ]
+    },
+    {
+      "model": "Stacked TF-IDF + embeddings + linguistic",
+      "cv_f1": 0.8649625367455936,
+      "cv_std": 0.025147568708625497,
+      "fold_scores": [
+        0.8787878787878788,
+        0.8313725490196079,
+        0.8593155893536122,
+        0.8503937007874016,
+        0.9049429657794676
+      ]
+    }
+  ],
+  "ablations": [
+    {
+      "experiment": "Classifier only",
+      "accuracy": 0.9125,
+      "precision": 0.8975903614457831,
+      "recall": 0.93125,
+      "f1": 0.9141104294478528,
+      "roc_auc": 0.9640234375000001,
+      "pr_auc": 0.9628170377460632,
+      "threshold": 0.42000000000000004,
+      "confusion_matrix": [
+        [
+          143,
+          17
+        ],
+        [
+          11,
+          149
+        ]
+      ]
+    },
+    {
+      "experiment": "Composite design weights",
+      "accuracy": 0.878125,
+      "precision": 0.8622754491017964,
+      "recall": 0.9,
+      "f1": 0.8807339449541285,
+      "roc_auc": 0.9418359375,
+      "pr_auc": 0.9330156271206735,
+      "threshold": 0.33,
+      "confusion_matrix": [
+        [
+          137,
+          23
+        ],
+        [
+          16,
+          144
+        ]
+      ]
+    },
+    {
+      "experiment": "Learned logistic weights",
+      "accuracy": 0.909375,
+      "precision": 0.8922155688622755,
+      "recall": 0.93125,
+      "f1": 0.9113149847094801,
+      "roc_auc": 0.965078125,
+      "pr_auc": 0.9609304287417537,
+      "threshold": 0.43,
+      "confusion_matrix": [
+        [
+          142,
+          18
+        ],
+        [
+          11,
+          149
+        ]
+      ]
+    },
+    {
+      "experiment": "Without D",
+      "accuracy": 0.909375,
+      "precision": 0.901840490797546,
+      "recall": 0.91875,
+      "f1": 0.9102167182662538,
+      "roc_auc": 0.95671875,
+      "pr_auc": 0.9543901669044345,
+      "threshold": 0.3,
+      "confusion_matrix": [
+        [
+          144,
+          16
+        ],
+        [
+          13,
+          147
+        ]
+      ]
+    },
+    {
+      "experiment": "Without C",
+      "accuracy": 0.615625,
+      "precision": 0.5742971887550201,
+      "recall": 0.89375,
+      "f1": 0.6992665036674817,
+      "roc_auc": 0.7008984374999999,
+      "pr_auc": 0.7035456184490567,
+      "threshold": 0.2,
+      "confusion_matrix": [
+        [
+          54,
+          106
+        ],
+        [
+          17,
+          143
+        ]
+      ]
+    },
+    {
+      "experiment": "Without L",
+      "accuracy": 0.88125,
+      "precision": 0.8546511627906976,
+      "recall": 0.91875,
+      "f1": 0.8855421686746988,
+      "roc_auc": 0.94765625,
+      "pr_auc": 0.9388834455111967,
+      "threshold": 0.39,
+      "confusion_matrix": [
+        [
+          135,
+          25
+        ],
+        [
+          13,
+          147
+        ]
+      ]
+    },
+    {
+      "experiment": "Without E",
+      "accuracy": 0.86875,
+      "precision": 0.8470588235294118,
+      "recall": 0.9,
+      "f1": 0.8727272727272727,
+      "roc_auc": 0.9438671875000001,
+      "pr_auc": 0.9351112168681268,
+      "threshold": 0.33,
+      "confusion_matrix": [
+        [
+          134,
+          26
+        ],
+        [
+          16,
+          144
+        ]
+      ]
+    },
+    {
+      "experiment": "Without R (absent in corpus)",
+      "accuracy": 0.878125,
+      "precision": 0.8622754491017964,
+      "recall": 0.9,
+      "f1": 0.8807339449541285,
+      "roc_auc": 0.9418359375,
+      "pr_auc": 0.9330156271206735,
+      "threshold": 0.33,
+      "confusion_matrix": [
+        [
+          137,
+          23
+        ],
+        [
+          16,
+          144
+        ]
+      ]
+    }
+  ],
+  "weights": {
+    "design": {
+      "D": 0.35294117647058826,
+      "C": 0.29411764705882354,
+      "L": 0.23529411764705885,
+      "E": 0.11764705882352942
+    },
+    "learned_logistic_coefficients": {
+      "D": 1.9452208201318744,
+      "C": 6.385907156664448,
+      "L": -0.6110846532238332,
+      "E": 0.6129286278552778
+    },
+    "learned_intercept": -4.0640765293390215
+  },
+  "embedding_backend": "MiniLM",
+  "sentiment_backend": "distilbert",
+  "rating_signal": "Unavailable: original corpus has no star ratings; R omitted and weights renormalized.",
+  "threshold_selection": "Maximum F1 on out-of-fold training predictions; frozen before holdout evaluation. Learned-weight threshold uses a second training-only CV.",
+  "hotel_protocol": "5-fold GroupKFold by hotel on the training pool only; final 20% holdout untouched.",
+  "limitations": [
+    "Corpus deception labels do not measure real-world fraud.",
+    "R cannot be validated on the unrated corpus.",
+    "No natural coordination labels exist; cluster recovery measured on synthetic injections only."
+  ],
+  "synthetic_cluster_recovery": {
+    "recovered_pairs": 23,
+    "total_pairs": 23,
+    "pair_recall": 1.0,
+    "description": "Connected-component pair recall on injected groups; not real-world coordination accuracy."
+  }
+}

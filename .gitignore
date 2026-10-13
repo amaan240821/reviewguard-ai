@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+.pytest_cache/
+models/hf_cache/
+models/embedding_cache/
+models/text_embeddings/
+models/sentiment_cache/
+*.log
+.DS_Store
+
+# Local runtime and credentials
+models/mpl_cache/
+.env
+.env.*
+!.env.example

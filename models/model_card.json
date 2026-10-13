@@ -1,0 +1,106 @@
+{
+  "algorithm": "TF-IDF + Linear SVM",
+  "seed": 42,
+  "train_rows": 1276,
+  "test_rows": 320,
+  "train_hotels": [
+    "affinia",
+    "allegro",
+    "amalfi",
+    "ambassador",
+    "conrad",
+    "fairmont",
+    "hardrock",
+    "hilton",
+    "homewood",
+    "hyatt",
+    "intercontinental",
+    "james",
+    "knickerbocker",
+    "monaco",
+    "omni",
+    "palmer",
+    "sheraton",
+    "sofitel",
+    "swissotel",
+    "talbott"
+  ],
+  "test_hotels": [
+    "affinia",
+    "allegro",
+    "amalfi",
+    "ambassador",
+    "conrad",
+    "fairmont",
+    "hardrock",
+    "hilton",
+    "homewood",
+    "hyatt",
+    "intercontinental",
+    "james",
+    "knickerbocker",
+    "monaco",
+    "omni",
+    "palmer",
+    "sheraton",
+    "sofitel",
+    "swissotel",
+    "talbott"
+  ],
+  "calibration": "3-fold sigmoid calibration inside each outer training fold",
+  "dataset": "Ott Deceptive Opinion Spam Corpus v1.4",
+  "dataset_sha256": "aeb00f0c7aa2038c0d16d60b520c30c0e88644b38492be40c930e72f2d8ce5d4",
+  "split": "80/20 stratified by label \u00d7 polarity",
+  "selection": "Training-only 5-fold CV F1; heldout test used only for evaluation",
+  "scope": "English hotel reviews; research screening only",
+  "model_comparison": [
+    {
+      "model": "TF-IDF + Logistic Regression",
+      "cv_f1": 0.8898490951127368,
+      "cv_std": 0.019305760530479454,
+      "fold_scores": [
+        0.9212598425196851,
+        0.8769230769230769,
+        0.8949416342412452,
+        0.8638132295719845,
+        0.8923076923076924
+      ]
+    },
+    {
+      "model": "TF-IDF + Linear SVM",
+      "cv_f1": 0.8904857179168724,
+      "cv_std": 0.024746684217170002,
+      "fold_scores": [
+        0.924901185770751,
+        0.8725868725868726,
+        0.8992248062015504,
+        0.8537549407114624,
+        0.9019607843137255
+      ]
+    },
+    {
+      "model": "MiniLM + Logistic Regression",
+      "cv_f1": 0.8049314519919001,
+      "cv_std": 0.03798156195455751,
+      "fold_scores": [
+        0.7878787878787878,
+        0.8156862745098039,
+        0.7849056603773585,
+        0.7630522088353414,
+        0.8731343283582089
+      ]
+    },
+    {
+      "model": "Stacked TF-IDF + embeddings + linguistic",
+      "cv_f1": 0.8649625367455936,
+      "cv_std": 0.025147568708625497,
+      "fold_scores": [
+        0.8787878787878788,
+        0.8313725490196079,
+        0.8593155893536122,
+        0.8503937007874016,
+        0.9049429657794676
+      ]
+    }
+  ]
+}

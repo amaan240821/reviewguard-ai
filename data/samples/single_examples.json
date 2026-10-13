@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Detailed stay",
+    "text": "We stayed in room 412 for three nights. The bed was comfortable and the bathroom had a good shower. Breakfast started at 7 and the train was a ten minute walk. The elevator was slow, but the front desk helped with our bags. I would stay again for the location.",
+    "rating": 4
+  },
+  {
+    "name": "Promotional",
+    "text": "BEST PRODUCT EVER!!!!! BUY NOW!!!!! Absolutely perfect, amazing amazing amazing. Must buy, highly recommend, five stars!!!",
+    "rating": 5
+  },
+  {
+    "name": "Template",
+    "text": "Excellent product. Amazing quality and absolutely worth every penny.",
+    "rating": 5
+  },
+  {
+    "name": "Rating contradiction",
+    "text": "Absolutely wonderful stay. Everything was perfect and the service was amazing. I loved every minute and highly recommend this hotel.",
+    "rating": 1
+  },
+  {
+    "name": "Very short",
+    "text": "AMAZING!!! PERFECT!!!",
+    "rating": 5
+  },
+  {
+    "name": "Long and balanced",
+    "text": "During our four night stay the room on the eighth floor faced the river. The bathroom was clean and breakfast included eggs and fruit. We walked to the station in twelve minutes. Although the bed was comfortable, the air conditioning rattled on the first night. The desk sent a technician the next morning. Overall the location worked well for our conference, but I would ask for a quieter room next time.",
+    "rating": 4
+  }
+]
